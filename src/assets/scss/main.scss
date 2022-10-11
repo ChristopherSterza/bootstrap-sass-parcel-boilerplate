@@ -1,0 +1,14 @@
+@import './abstracts/variables';
+
+// Create your own map
+@import './custom-colors';
+
+// Need these imports before attempting to merge maps
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/mixins';
+@import '~bootstrap/scss/variables';
+
+// Merge the maps
+$theme-colors: map-merge($theme-colors, $custom-colors);
+
+@import '~bootstrap/scss/bootstrap';
